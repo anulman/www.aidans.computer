@@ -1,0 +1,259 @@
+<html>
+  <head>
+    <style>
+      :root {
+        /* from https://www.canva.com/color-palette/ */
+        --color-medium-turquoise: #33A3CB;
+        --color-sienna: #8B4225;
+        --color-dark-grey: #B8ADA8;
+        --color-dark-slate-grey: #233749;
+        --color-slate-grey: #6D727C;
+      }
+
+      body {
+        background: url('images/aidan.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+
+        margin: 0;
+      }
+
+      body > canvas:first-child {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+
+        z-index: -1;
+        opacity: .3;
+      }
+
+      nav {
+        width: 100%;
+        height: 3rem;
+        overflow: hidden;
+        transition: transform .5s ease-in-out;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        background: var(--color-medium-turquoise);
+        color: white;
+        text-transform: uppercase;
+      }
+
+      nav.hidden {
+        transform: translateY(-100%);
+      }
+
+      nav#banner {
+        background: var(--color-dark-slate-grey);
+      }
+
+      nav ul {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        justify-content: space-evenly;
+
+        list-style: none;
+      }
+
+      nav li {
+        height: 100%;
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+      }
+
+      nav li + li {
+        border-left: 1px solid white;
+      }
+
+      nav a {
+        color: inherit;
+      }
+
+      nav a:hover {
+        color: lightgrey;
+      }
+
+      main {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+
+      main header, main section {
+        width: 60%;
+        margin: 0 auto;
+      }
+
+      main header {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        text-align: center;
+      }
+
+      main section {
+        background: rgba(255,255,255,0.8);
+        padding: 1rem 2rem;
+      }
+
+      main section + section {
+        margin-top: 2rem;
+      }
+
+      main section p::first-line {
+        font-size: 1.25rem;
+        font-variant: small-caps;
+        line-height: 1.25rem;
+      }
+
+      main section p::first-letter {
+        font-family: cursive;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas></canvas>
+    <nav>
+      <ul>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/'>How I Work</a></li>
+        <li><a href='/'>Open Source</a></li>
+        <li><a href='/'>Case Studies</a></li>
+      </ul>
+    </nav>
+
+    <nav id='banner' class='hidden'>
+      Click me for friendly
+    </nav>
+
+    <main>
+      <header>
+        <h1>hello i am aidan</h1>
+      </header>
+
+      <section>
+        <h2>read a thing</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent neque risus, tempus sed est nec, vehicula commodo purus. Morbi eget pharetra ipsum. Nullam lacinia nibh et tristique eleifend. Nam quis mi ut eros tristique pellentesque quis a nulla. Ut tellus neque, egestas ac massa vel, fringilla iaculis felis. Aenean vel tincidunt velit. Sed mattis sapien sit amet pellentesque tristique. Suspendisse vulputate dui magna, at luctus metus consectetur in. Duis non accumsan augue. Proin ultricies, ex quis vulputate tempus, justo quam elementum eros, vitae lobortis nisi eros non odio. Donec malesuada sapien eget risus euismod posuere. Suspendisse posuere vitae metus sit amet luctus. Proin sed sem vel nisi aliquet ultricies eu a felis. Mauris in est lorem.</p>
+        <p>Nam augue leo, tempus nec auctor ut, dignissim eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. In vestibulum leo eu neque pretium laoreet. Fusce nulla dolor, hendrerit id nibh eu, tincidunt accumsan lacus. Cras sollicitudin, tellus in gravida fringilla, odio massa mattis ipsum, non pharetra metus leo et purus. Duis quis tortor luctus ante pellentesque volutpat ut at ante. Nulla id libero mattis, mattis felis eget, vestibulum lectus. Sed eu magna vel justo vehicula hendrerit ac a est. Cras dapibus est imperdiet, finibus metus vitae, dapibus odio. Mauris sit amet pharetra risus. Aliquam orci erat, vehicula quis tincidunt quis, aliquam sit amet ipsum. Etiam pulvinar odio quis nibh consectetur, in egestas nunc malesuada. Etiam suscipit tellus nulla, ut aliquet nulla viverra eget. Cras feugiat magna nec dui imperdiet, id feugiat turpis vulputate. Aliquam mattis at justo eu suscipit.</p>
+        <p>Morbi accumsan nisl non mauris sodales ultricies. Fusce ante nibh, suscipit eu odio eu, lacinia semper neque. Ut consectetur quam turpis, sed maximus metus scelerisque nec. Etiam tempus ullamcorper odio non vehicula. Nunc molestie vel magna ac maximus. Suspendisse erat neque, efficitur quis est vel, ullamcorper faucibus tellus. Etiam porttitor mauris turpis, et accumsan nisl iaculis sed. Ut rutrum tristique lorem eu dapibus. Donec imperdiet tortor urna, vehicula imperdiet arcu egestas id. Suspendisse nisi est, aliquet sit amet orci quis, accumsan dapibus justo. Vestibulum eget sapien risus.</p>
+        <p>Fusce rutrum enim a eros fringilla luctus. Suspendisse imperdiet condimentum dictum. Etiam luctus, libero non imperdiet gravida, leo mauris blandit odio, sed pharetra dolor nibh et felis. Cras at tortor et urna efficitur molestie. Vestibulum id odio ut sapien vehicula ultricies. In eu lacinia lectus. Integer bibendum mauris lorem, eu molestie libero commodo et. Vestibulum ornare interdum dolor vitae viverra.</p>
+        <p>Curabitur auctor nunc id ante fringilla porta non sit amet diam. Cras ullamcorper, nisl eu faucibus gravida, dolor metus gravida lectus, ac ullamcorper libero eros quis quam. Mauris velit leo, condimentum et dui quis, egestas viverra purus. Vestibulum placerat consectetur sapien, ac fringilla est ornare quis. Pellentesque rhoncus turpis tortor, a pulvinar mauris viverra et. Phasellus sit amet orci nisi. Vestibulum pulvinar sed tortor in viverra. Sed sit amet lobortis mi, ac imperdiet magna. Sed id ultricies dui. Suspendisse rutrum tellus quis justo mollis ultrices. In et ligula a quam sollicitudin malesuada ut quis orci. Pellentesque non massa eu odio ultricies semper ac ultrices augue. Maecenas hendrerit elit non fermentum malesuada. Integer facilisis erat a dolor lobortis pellentesque. Praesent fringilla in orci non tempor.</p>
+      </section>
+
+      <section>
+        <h2>read some more things</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent neque risus, tempus sed est nec, vehicula commodo purus. Morbi eget pharetra ipsum. Nullam lacinia nibh et tristique eleifend. Nam quis mi ut eros tristique pellentesque quis a nulla. Ut tellus neque, egestas ac massa vel, fringilla iaculis felis. Aenean vel tincidunt velit. Sed mattis sapien sit amet pellentesque tristique. Suspendisse vulputate dui magna, at luctus metus consectetur in. Duis non accumsan augue. Proin ultricies, ex quis vulputate tempus, justo quam elementum eros, vitae lobortis nisi eros non odio. Donec malesuada sapien eget risus euismod posuere. Suspendisse posuere vitae metus sit amet luctus. Proin sed sem vel nisi aliquet ultricies eu a felis. Mauris in est lorem.</p>
+        <p>Nam augue leo, tempus nec auctor ut, dignissim eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. In vestibulum leo eu neque pretium laoreet. Fusce nulla dolor, hendrerit id nibh eu, tincidunt accumsan lacus. Cras sollicitudin, tellus in gravida fringilla, odio massa mattis ipsum, non pharetra metus leo et purus. Duis quis tortor luctus ante pellentesque volutpat ut at ante. Nulla id libero mattis, mattis felis eget, vestibulum lectus. Sed eu magna vel justo vehicula hendrerit ac a est. Cras dapibus est imperdiet, finibus metus vitae, dapibus odio. Mauris sit amet pharetra risus. Aliquam orci erat, vehicula quis tincidunt quis, aliquam sit amet ipsum. Etiam pulvinar odio quis nibh consectetur, in egestas nunc malesuada. Etiam suscipit tellus nulla, ut aliquet nulla viverra eget. Cras feugiat magna nec dui imperdiet, id feugiat turpis vulputate. Aliquam mattis at justo eu suscipit.</p>
+      </section>
+
+      <section>
+        <h2>read the last things</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent neque risus, tempus sed est nec, vehicula commodo purus. Morbi eget pharetra ipsum. Nullam lacinia nibh et tristique eleifend. Nam quis mi ut eros tristique pellentesque quis a nulla. Ut tellus neque, egestas ac massa vel, fringilla iaculis felis. Aenean vel tincidunt velit. Sed mattis sapien sit amet pellentesque tristique. Suspendisse vulputate dui magna, at luctus metus consectetur in. Duis non accumsan augue. Proin ultricies, ex quis vulputate tempus, justo quam elementum eros, vitae lobortis nisi eros non odio. Donec malesuada sapien eget risus euismod posuere. Suspendisse posuere vitae metus sit amet luctus. Proin sed sem vel nisi aliquet ultricies eu a felis. Mauris in est lorem.</p>
+        <p>Nam augue leo, tempus nec auctor ut, dignissim eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. In vestibulum leo eu neque pretium laoreet. Fusce nulla dolor, hendrerit id nibh eu, tincidunt accumsan lacus. Cras sollicitudin, tellus in gravida fringilla, odio massa mattis ipsum, non pharetra metus leo et purus. Duis quis tortor luctus ante pellentesque volutpat ut at ante. Nulla id libero mattis, mattis felis eget, vestibulum lectus. Sed eu magna vel justo vehicula hendrerit ac a est. Cras dapibus est imperdiet, finibus metus vitae, dapibus odio. Mauris sit amet pharetra risus. Aliquam orci erat, vehicula quis tincidunt quis, aliquam sit amet ipsum. Etiam pulvinar odio quis nibh consectetur, in egestas nunc malesuada. Etiam suscipit tellus nulla, ut aliquet nulla viverra eget. Cras feugiat magna nec dui imperdiet, id feugiat turpis vulputate. Aliquam mattis at justo eu suscipit.</p>
+        <p>Morbi accumsan nisl non mauris sodales ultricies. Fusce ante nibh, suscipit eu odio eu, lacinia semper neque. Ut consectetur quam turpis, sed maximus metus scelerisque nec. Etiam tempus ullamcorper odio non vehicula. Nunc molestie vel magna ac maximus. Suspendisse erat neque, efficitur quis est vel, ullamcorper faucibus tellus. Etiam porttitor mauris turpis, et accumsan nisl iaculis sed. Ut rutrum tristique lorem eu dapibus. Donec imperdiet tortor urna, vehicula imperdiet arcu egestas id. Suspendisse nisi est, aliquet sit amet orci quis, accumsan dapibus justo. Vestibulum eget sapien risus.</p>
+      </section>
+    </main>
+
+    <script>
+      // from https://github.com/bfred-it/intrinsic-scale/blob/master/dist/intrinsic-scale.browser.js
+      !function(i){"use strict";function n(i){return function(n,t,c,r){var e,s,u=c/r,a=n/t;return(i?u>a:u<a)?(e=n,s=e/u):(s=t,e=s*u),{width:e,height:s,x:(n-e)/2,y:(t-s)/2}}}var t=n(!0),c=n(!1);i.contain=t,i.cover=c}(this.intrinsicScale=this.intrinsicScale||{});
+
+      var maxHorizOffset = 20;
+      var image = new Image();
+
+      image.src = '/images/aidan.jpg';
+      image.onload = function() {
+        runGlitchLoop();
+        document.querySelector('body').style.background = 'unset';
+      }
+
+      function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function draw({ isGlitched } = { isGlitched: false }) {
+        var canvas = document.querySelector('canvas');
+
+        resetCanvas(canvas);
+        drawBackgroundToCanvas(canvas, image, isGlitched);
+      }
+
+      function drawBackgroundToCanvas(canvas, image, isGlitched) {
+        var ctx = canvas.getContext('2d');
+        var destination = intrinsicScale.cover(window.innerWidth, window.innerHeight, image.width, image.height);
+        var scale = image.height / destination.height;
+
+        var source = {
+          x: scale * destination.x * -1,
+          y: Math.min(scale * destination.y * -2, 100),
+          width: image.width,
+          height: image.height
+        }
+
+        destination.x = 0;
+        destination.y = 0;
+
+        if (!isGlitched) {
+          drawRaw(ctx, image, source, destination);
+        } else {
+          // todo: consider processing.js http://processingjs.org/reference/
+          // todo: consider similar approach to glitch.js https://github.com/sjhewitt/glitch.js/blob/master/glitch.js#L45-L144
+          var numVerticalSlices;
+          var baseX = source.x;
+
+          destination.height = getRandom(20, 50);
+
+          source.height = destination.height * scale;
+          numVerticalSlices = Math.round(window.innerHeight / destination.height);
+          // todo: handle odd sizes
+
+          while (numVerticalSlices > 0) {
+            source.x = baseX + getRandom(-Math.abs(maxHorizOffset), maxHorizOffset);
+
+            drawRaw(ctx, image, source, destination);
+
+            source.y += source.height;
+            destination.y += destination.height;
+
+            numVerticalSlices -= 1;
+          }
+        }
+      }
+
+      function drawRaw(ctx, image, source, destination) {
+        ctx.drawImage(image, source.x, source.y, source.width, source.height, destination.x, destination.y, destination.width, destination.height);
+      }
+
+      function resetCanvas(canvas) {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      function runGlitchLoop() {
+        // todo: adjust timing to be more jumpy / staticy -- math / trig fn?
+        var msTimeout = getRandom(1500, 5000);
+        var numGlitches = getRandom(2, 5);
+
+        draw();
+
+        for (var i = 0; i < numGlitches; i++) {
+          setTimeout(draw.bind(this, { isGlitched: true }), msTimeout);
+          msTimeout += getRandom(50, (i + 1) * 100)
+        }
+
+        setTimeout(runGlitchLoop, msTimeout);
+      }
+    </script>
+  </body>
+</html>
