@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'aidans-computer',
+    podModulePrefix: 'aidans-computer/pods',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
