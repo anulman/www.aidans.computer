@@ -43,6 +43,7 @@
   },
   "private": true,
   "dependencies": {
-    "ember-cli-sass": "^7.1.1"
+    "ember-cli-sass": "^7.1.1",
+    "intrinsic-scale": "^3.0.3"
   }
 }

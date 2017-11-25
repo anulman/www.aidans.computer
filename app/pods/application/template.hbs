@@ -1,1 +1,18 @@
-hello
+{{glitchy-canvas imageUrl='/assets/images/aidan.jpg'}}
+
+{{#nav-bar isShowing=true}}
+  <ul>
+    <li><a href='/'>Home</a></li>
+    <li><a href='/'>How I Work</a></li>
+    <li><a href='/'>Open Source</a></li>
+    <li><a href='/'>Case Studies</a></li>
+  </ul>
+{{/nav-bar}}
+
+{{#nav-bar id='banner' isShowing=false}}
+  Click me for friendly
+{{/nav-bar}}
+
+<main>
+  {{outlet}}
+</main>
