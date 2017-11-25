@@ -17,6 +17,7 @@ body {
 
   > .ember-view {
     @import 'template/canvas';
+    @import 'template/footer';
     @import 'template/main';
     @import 'template/nav-bar';
   }
