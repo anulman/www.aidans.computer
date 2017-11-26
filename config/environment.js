@@ -6,7 +6,7 @@ module.exports = function(environment) {
     modulePrefix: 'aidans-computer',
     podModulePrefix: 'aidans-computer/pods',
     environment,
-    rootURL: '/',
+    rootURL: environment === 'production' ? '/www.aidans.computer/' : '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
