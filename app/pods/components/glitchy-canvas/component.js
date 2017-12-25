@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 import { createProgram } from 'ember-cli-webgl/utils';
-import vertexShader from '../../../shaders/vertex';
-import fragmentShader from '../../../shaders/fragment';
+import vertexShader from './vertex';
+import fragmentShader from './fragment';
 
 const {
   Component,
