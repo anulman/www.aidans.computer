@@ -83,6 +83,7 @@ function startProgram(image, gl, program) {
   loadTextureFor(gl, image, pointers);
   resizeCanvas(gl, image, pointers);
   drawScene(gl, pointers);
+  this.element.style.setProperty('background', 'none');
 
   window.addEventListener('resize', resizeCanvas.bind(this, ...[
     gl,
