@@ -1,11 +1,8 @@
-:root {
-  /* from https://www.canva.com/color-palette/ */
-  --color-medium-turquoise: #33A3CB;
-  --color-sienna: #8B4225;
-  --color-dark-grey: #B8ADA8;
-  --color-dark-slate-grey: #233749;
-  --color-slate-grey: #6D727C;
-}
+$color-medium-turquoise: #33A3CB;
+$color-sienna: #8B4225;
+$color-dark-grey: #B8ADA8;
+$color-dark-slate-grey: #233749;
+$color-slate-grey: #6D727C;
 
 body {
   margin: 0;
