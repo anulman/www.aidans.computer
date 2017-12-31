@@ -53,6 +53,21 @@ nav {
     &:hover {
       background: darken($color-medium-turquoise, 10%);
       cursor: pointer;
+
+      > ul {
+        display: flex;
+        flex-direction: column;
+        background: $color-medium-turquoise;
+
+        position: absolute;
+        top: 100%;
+        width: 100%;
+
+        > li + li {
+          border-left-style: none;
+          border-top: 1px solid white;
+        }
+      }
     }
   }
 

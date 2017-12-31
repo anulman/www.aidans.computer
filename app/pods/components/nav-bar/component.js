@@ -1,8 +1,7 @@
-import Ember from 'ember';
+import CollectionComponent from './collection/component';
 
-const { Component } = Ember;
-
-export default Component.extend({
+export default CollectionComponent.extend({
   tagName: 'nav',
-  classNameBindings: ['isShowing::hidden']
+  layoutName: 'components/nav-bar/collection',
+  classNameBindings: ['isShowing::hidden'],
 });
