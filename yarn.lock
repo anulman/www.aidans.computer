@@ -2016,7 +2016,7 @@ ember-cli-htmlbars@^2.0.1, ember-cli-htmlbars@^2.0.3:
     json-stable-stringify "^1.0.0"
     strip-bom "^3.0.0"
 
-ember-cli-hyde@~0.0.1:
+ember-cli-hyde@~0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/ember-cli-hyde/-/ember-cli-hyde-0.0.3.tgz#eccb0d6e0fb42b65962111f750656d2ea55b74c8"
   dependencies:
@@ -2133,7 +2133,7 @@ ember-cli-shims@^1.1.0:
     ember-rfc176-data "^0.3.1"
     silent-error "^1.0.1"
 
-ember-cli-showdown@^4.1.1, ember-cli-showdown@~4.1.1:
+ember-cli-showdown@~4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/ember-cli-showdown/-/ember-cli-showdown-4.1.1.tgz#7cde265d22bb7460f22d3b605428c4f75f05aafa"
   dependencies:
@@ -2194,9 +2194,9 @@ ember-cli-version-checker@^2.0.0, ember-cli-version-checker@^2.1.0:
     resolve "^1.3.3"
     semver "^5.3.0"
 
-ember-cli-webgl@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-webgl/-/ember-cli-webgl-0.0.1.tgz#2195455576561d52cd7452efa5e2c365ec90fcf9"
+ember-cli-webgl@~0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/ember-cli-webgl/-/ember-cli-webgl-0.0.2.tgz#3e5417e31e05a6313f473810987d37fdb984b911"
   dependencies:
     broccoli-webgl-transpiler "^0.0.1"
     ember-cli-babel "^6.6.0"
