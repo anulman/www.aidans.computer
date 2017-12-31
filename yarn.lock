@@ -2017,8 +2017,8 @@ ember-cli-htmlbars@^2.0.1, ember-cli-htmlbars@^2.0.3:
     strip-bom "^3.0.0"
 
 ember-cli-hyde@~0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/ember-cli-hyde/-/ember-cli-hyde-0.0.3.tgz#eccb0d6e0fb42b65962111f750656d2ea55b74c8"
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/ember-cli-hyde/-/ember-cli-hyde-0.0.4.tgz#8bdc6c2414db998731395adcdaeda47c1423a322"
   dependencies:
     broccoli-hyde-compiler "~0.0.1"
     ember-cli-babel "^6.6.0"
