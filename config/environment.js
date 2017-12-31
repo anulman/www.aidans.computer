@@ -6,7 +6,7 @@ module.exports = function(environment) {
     modulePrefix: 'aidans-computer',
     podModulePrefix: 'aidans-computer/pods',
     environment,
-    rootURL: environment === 'production' ? '/www.aidans.computer/' : '/',
+    rootURL:  '/www.aidans.computer/', // todo: rm once prod
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -23,6 +23,10 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     }
+  };
+
+  ENV.hyde = {
+    namespace: ENV.rootURL
   };
 
   if (environment === 'development') {
