@@ -7,7 +7,12 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('home', { path : '/' });
+  this.route('content', { path: '/' }, function() {
+    this.route('home', { path: '/', resetNamespace: true });
+
+    this.route('collection', { path: '/collections/:collection_id' });
+    this.route('item', { path: '/*item_id' });
+  });
 });
 
 export default Router;
