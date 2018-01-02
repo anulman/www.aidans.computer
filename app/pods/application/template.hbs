@@ -8,7 +8,9 @@
 
       {{#each navCollections as |collection|}}
         {{#nav.dropdown tagName='li' closeOnMenuClick=true as |dd|}}
-          {{#dd.toggle onClick=(action preventDefault)}}{{link-to collection.name 'content.collection' collection.model}}{{/dd.toggle}}
+          {{#dd.toggle onClick=(action preventDefault)}}
+            {{link-to collection.name 'content.collection' collection.model}}
+          {{/dd.toggle}}
 
           {{#dd.menu as |child|}}
             {{#each collection.model.items as |item|}}
