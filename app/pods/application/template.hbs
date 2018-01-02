@@ -1,53 +1,36 @@
-{{glitchy-canvas id='glitchy-background'}}
+<div class={{routeStyleNamespaceClassSet}}>
+  {{glitchy-canvas id='glitchy-background'}}
 
-{{#nav-bar isShowing=true as |nav|}}
-  {{#nav.collection as |bar|}}
-    {{bar.item 'Home'}}
-    {{bar.item 'How I Work'}}
-    {{#bar.item 'Open Source' as |item|}}
-      {{#with (find hyde.collections by='id' value='content/open-source') as |collection|}}
-        {{item.trigger href=(concat '/collections/' (path-for-hyde collection))
-          onTransition=(action transitionToRoute 'content.collection' collection)}}
+  <nav>
+    {{#bs-nav dropdownComponent='bs-nav/dropdown' as |nav|}}
+      {{#nav.item}}{{nav.link-to 'Home' 'home'}}{{/nav.item}}
+      {{#nav.item}}{{nav.link-to 'How I Work' 'home'}}{{/nav.item}}
 
-        {{#item.children as |sub|}}
-          {{#each collection.items as |hydeItem|}}
-            {{#sub.item hydeItem.yaml.title as |subItem|}}
-              {{subItem.trigger href=(concat '/' (path-for-hyde hydeItem))
-                onTransition=(action transitionToRoute 'content.item' hydeItem)}}
-            {{/sub.item}}
-          {{/each}}
-        {{/item.children}}
-      {{/with}}
-    {{/bar.item}}
+      {{#each navCollections as |collection|}}
+        {{#nav.dropdown tagName='li' closeOnMenuClick=true as |dd|}}
+          {{#dd.toggle onClick=(action preventDefault)}}{{link-to collection.name 'content.collection' collection.model}}{{/dd.toggle}}
 
-    {{#bar.item 'Clients' as |item|}}
-      {{#with (find hyde.collections by='id' value='content/clients') as |collection|}}
-        {{item.trigger href=(concat '/collections/' (path-for-hyde collection))
-          onTransition=(action transitionToRoute 'content.collection' collection)}}
+          {{#dd.menu as |child|}}
+            {{#each collection.model.items as |item|}}
+              {{#child.item}}
+                {{#child.link-to 'content.item' item}}
+                  {{item.yaml.title}}
+                {{/child.link-to}}
+              {{/child.item}}
+            {{/each}}
+          {{/dd.menu}}
+        {{/nav.dropdown}}
+      {{/each}}
+    {{/bs-nav}}
+  </nav>
 
-        {{#item.children as |sub|}}
-          {{#each collection.items as |hydeItem|}}
-            {{#sub.item hydeItem.yaml.title as |subItem|}}
-              {{subItem.trigger href=(concat '/' (path-for-hyde hydeItem))
-                onTransition=(action transitionToRoute 'content.item' hydeItem)}}
-            {{/sub.item}}
-          {{/each}}
-        {{/item.children}}
-      {{/with}}
-    {{/bar.item}}
-  {{/nav.collection}}
-{{/nav-bar}}
+  <main>
+    {{outlet}}
+  </main>
 
-{{#nav-bar id='banner' isShowing=false}}
-  Click me for friendly
-{{/nav-bar}}
-
-<main>
-  {{outlet}}
-</main>
-
-<footer>
-  copyright {{moment-format today 'YYYY'}} aidan nulman.
-  photo by eva blue.
-  contact me.
-</footer>
+  <footer>
+    copyright {{moment-format today 'YYYY'}} aidan nulman.
+    photo by eva blue.
+    contact me.
+  </footer>
+</div>

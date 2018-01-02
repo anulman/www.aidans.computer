@@ -1,6 +1,5 @@
 import Ember from 'ember';
 import moment from 'moment';
-import ENV from '../../config/environment';
 
 const {
   Controller,
@@ -9,13 +8,23 @@ const {
 
 export default Controller.extend({
   today: moment(),
-  rootURL: ENV.rootURL,
 
   hyde: computed(function() {
     return this.store.findRecord('hyde/collection', 'content');
   }),
 
-  goTo(routeName, ...args) {
-    this.transitionToRoute(routeName, ...args.slice(0, -1));
+  navCollections: computed('hyde.collections.[]', function() {
+    let collections = this.getWithDefault('hyde.collections', []);
+
+    /* eslint-disable max-len */
+    return [
+      { name: 'Open Source', model: collections.findBy('id', 'content/open-source') },
+      { name: 'Clients', model: collections.findBy('id', 'content/clients') }
+    ];
+    /* eslint-enable max-len */
+  }),
+
+  preventDefault(event) {
+    event.preventDefault();
   }
 });
