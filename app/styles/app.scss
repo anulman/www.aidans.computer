@@ -3,14 +3,23 @@ $color-sienna: #8B4225;
 $color-dark-grey: #B8ADA8;
 $color-dark-slate-grey: #233749;
 $color-slate-grey: #6D727C;
+$font-family-serif: "hatch", // preference, + serifs from https://www.sitepoint.com/eight-definitive-font-stacks/
+  Constantia,
+  "Lucida Bright",
+  Lucidabright,
+  "Lucida Serif",
+  Lucida,
+  "DejaVu Serif",
+  "Bitstream Vera Serif",
+  "Liberation Serif",
+  Georgia,
+  serif;
+
+$headings-font-family: $font-family-serif;
+
+@import "ember-bootstrap/bootstrap";
+@import "pod-styles.scss";
 
 body {
   margin: 0;
-
-  > .ember-view {
-    @import 'template/canvas';
-    @import 'template/footer';
-    @import 'template/main';
-    @import 'template/nav-bar';
-  }
 }
