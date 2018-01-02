@@ -17,5 +17,9 @@ export default Route.extend({
 
   setupController(controller, model) {
     controller.set('data', { item: model });
+  },
+
+  serialize(model) {
+    return { item_id: model.id.replace(/^content\//, '') };
   }
 });
