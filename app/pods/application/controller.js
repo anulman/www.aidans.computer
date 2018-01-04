@@ -22,9 +22,5 @@ export default Controller.extend({
       { name: 'Clients', model: collections.findBy('id', 'content/clients') }
     ];
     /* eslint-enable max-len */
-  }),
-
-  preventDefault(event) {
-    event.preventDefault();
-  }
+  })
 });

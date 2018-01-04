@@ -1,14 +1,15 @@
 <div class={{routeStyleNamespaceClassSet}}>
   {{glitchy-canvas id='glitchy-background'}}
 
-  <nav>
-    {{#bs-nav dropdownComponent='bs-nav/dropdown' as |nav|}}
-      {{#nav.item}}{{nav.link-to 'Home' 'home'}}{{/nav.item}}
-      {{#nav.item}}{{nav.link-to 'How I Work' 'home'}}{{/nav.item}}
+  <header class='sticky-top bg-primary'>
+    {{#nav-header class='container' dropdownComponent='nav-header/dropdown' as |nav|}}
+      {{#nav.item}}
+        {{nav.link-to 'Home' 'home' current-when=false}}
+      {{/nav.item}}
 
       {{#each navCollections as |collection|}}
-        {{#nav.dropdown tagName='li' closeOnMenuClick=true as |dd|}}
-          {{#dd.toggle onClick=(action preventDefault)}}
+        {{#nav.dropdown tagName='li' as |dd|}}
+          {{#dd.toggle}}
             {{link-to collection.name 'content.collection' collection.model}}
           {{/dd.toggle}}
 
@@ -23,16 +24,17 @@
           {{/dd.menu}}
         {{/nav.dropdown}}
       {{/each}}
-    {{/bs-nav}}
-  </nav>
+    {{/nav-header}}
+  </header>
 
-  <main>
+  <main class='container'>
     {{outlet}}
   </main>
 
-  <footer>
-    copyright {{moment-format today 'YYYY'}} aidan nulman.
-    photo by eva blue.
-    contact me.
+  <footer class='bg-dark text-white'>
+    <ul class='container list-unstyled d-flex align-items-center mb-2 mt-2'>
+      <li class='mr-1'>copyright {{moment-format today 'YYYY'}} aidan nulman.</li>
+      <li>photo by <a href='http://evablue.com'>eva blue</a>.</li>
+    </ul>
   </footer>
 </div>
