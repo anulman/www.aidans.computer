@@ -1,0 +1,42 @@
+.dropdown-toggle::after {
+  transform: rotateX(0deg);
+  transition: transform 0.2s linear;
+}
+
+&:hover, &.show {
+  background: theme-color-level(primary, -2);
+
+  .dropdown-toggle {
+    a {
+      color: white;
+    }
+
+    &::after {
+      transform: rotateX(180deg);
+    }
+  }
+}
+
+.dropdown-menu {
+  border: none;
+  border-radius: 0;
+
+  margin: 0;
+  padding: 0;
+
+  background: theme-color(info);
+  box-shadow: 0 0 2px theme-color(light);
+}
+
+.dropdown-item {
+  color: darken(white, 5%);
+
+  &:active, &.active {
+    background: theme-color-level(info, -1);
+  }
+
+  &:hover {
+    background: theme-color-level(info, -2);
+    color: white;
+  }
+}

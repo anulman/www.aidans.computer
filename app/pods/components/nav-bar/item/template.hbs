@@ -1,7 +1,0 @@
-{{#if hasBlock}}
-  {{yield (hash
-    trigger=(component triggerComponent title)
-    children=(component collectionComponent))}}
-{{else}}
-  {{component triggerComponent title}}
-{{/if}}

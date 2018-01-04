@@ -9,5 +9,9 @@ export default Route.extend({
 
   setupController(controller, model) {
     controller.set('data', { collection: model });
+  },
+
+  serialize(model) {
+    return { collection_id: model.id.replace(/^content\//, '') };
   }
 });

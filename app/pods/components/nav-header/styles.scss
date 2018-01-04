@@ -1,0 +1,21 @@
+a {
+  color: darken(white, 5%);
+  transform: color 0.2s ease-in;
+
+  &:hover {
+    color: white;
+    text-decoration: initial;
+  }
+}
+
+.nav-item {
+  outline: none;
+
+  &:active, &.active {
+    background: theme-color-level(primary, -1);
+  }
+
+  &:hover {
+    background: theme-color-level(primary, -2);
+  }
+}
