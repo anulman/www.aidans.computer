@@ -1,0 +1,12 @@
+<header class='container col-8'>
+  <h1>{{data.collection.name}}</h1>
+</header>
+
+{{#each data.collection.items as |item|}}
+  <section>
+    <article>
+      <h2>{{item.yaml.title}}</h2>
+      <p>{{item.yaml.description}}</p>
+    </article>
+  </section>
+{{/each}}
