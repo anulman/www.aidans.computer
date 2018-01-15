@@ -8,12 +8,8 @@ const {
 export default Controller.extend({
   thisYear: new Date().getFullYear(),
 
-  hyde: computed(function() {
-    return this.store.findRecord('hyde/collection', 'content');
-  }),
-
-  navCollections: computed('hyde.collections.[]', function() {
-    let collections = this.getWithDefault('hyde.collections', []);
+  navCollections: computed('data.content.collections.[]', function() {
+    let collections = this.getWithDefault('data.content.collections', []);
 
     /* eslint-disable max-len */
     return [
