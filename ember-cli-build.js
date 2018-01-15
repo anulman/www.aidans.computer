@@ -10,6 +10,11 @@ module.exports = function(defaults) {
       'importBootstrapFont': false,
       'importBootstrapCSS': false,
       'whitelist': []
+    },
+    prember: {
+      urls: [
+        '/'
+      ]
     }
   });
 
