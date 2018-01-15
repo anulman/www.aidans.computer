@@ -22,11 +22,11 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
-  };
+    },
 
-  ENV.hyde = {
-    namespace: ENV.rootURL
+    fastboot: {
+      hostWhitelist: ['anulman.com', 'aidans.computer', /^localhost:\d+$/]
+    }
   };
 
   ENV.highlightTheme = 'solarized-dark';
