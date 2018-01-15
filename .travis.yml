@@ -3,7 +3,7 @@ language: node_js
 node_js:
   - "6"
 
-sudo: false
+sudo: required
 dist: trusty
 
 addons:
@@ -32,9 +32,9 @@ after_success:
   - touch 'dist/.nojekyll'
 
 deploy:
-  local_dir: 'dist'
+  local-dir: 'dist'
   provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
   on:
     branch: master
