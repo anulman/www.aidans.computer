@@ -1,6 +1,4 @@
-import Ember from 'ember';
-
-const { Route } = Ember;
+import Route from '@ember/routing/route';
 
 export default Route.extend({
   model({ item_id }) {
@@ -9,9 +7,7 @@ export default Route.extend({
 
   afterModel(model, transition) {
     if (model.get('yaml') === undefined) {
-      let { item_id } = transition.params[this.routeName];
-
-      this.replaceWith('content.collection', item_id);
+      return tryCollection(this, transition);
     }
   },
 
@@ -21,5 +17,18 @@ export default Route.extend({
 
   serialize(model) {
     return { item_id: model.id.replace(/^content\//, '') };
+  },
+
+  actions: {
+    error(error, transition) {
+      tryCollection(this, transition);
+    }
   }
 });
+
+function tryCollection(context, transition) {
+  let { item_id } = transition.params[context.routeName];
+  let itemId = item_id.replace(/^collections\//, '');
+
+  context.replaceWith('content.collection', itemId);
+}
