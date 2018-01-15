@@ -3,6 +3,10 @@
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
+## PENDING
+- Wrap content routes as engines
+- Restore versioned deps for fastboot & broccoli-asset-rev once upstream supports it
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
