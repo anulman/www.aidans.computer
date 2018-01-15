@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import moment from 'moment';
 
 const {
   Controller,
@@ -7,7 +6,7 @@ const {
 } = Ember;
 
 export default Controller.extend({
-  today: moment(),
+  thisYear: new Date().getFullYear(),
 
   hyde: computed(function() {
     return this.store.findRecord('hyde/collection', 'content');
