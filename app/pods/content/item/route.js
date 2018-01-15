@@ -1,6 +1,9 @@
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 
 export default Route.extend({
+  fastboot: service(),
+
   model({ item_id }) {
     return this.store.findRecord('hyde/item', `content/${item_id}`);
   },
@@ -8,6 +11,10 @@ export default Route.extend({
   afterModel(model, transition) {
     if (model.get('yaml') === undefined) {
       return tryCollection(this, transition);
+    }
+
+    if (this.get('fastboot.isFastBoot')) {
+      return model.get('markdown');
     }
   },
 
