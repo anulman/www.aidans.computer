@@ -1,15 +1,10 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { computed } from '@ember/object';
+import { isBlank, isPresent } from '@ember/utils';
 
 import { createProgram } from 'ember-cli-webgl/utils';
 import vertexShader from './vertex';
 import fragmentShader from './fragment';
-
-const {
-  Component,
-  computed,
-  isBlank,
-  isPresent
-} = Ember;
 
 const MAX_HORIZONTAL_OFFSET = 20;
 const CLOCK_START_MARK_NAME = 'ember-cli-webgl:clockStart';

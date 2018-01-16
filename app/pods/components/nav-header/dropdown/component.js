@@ -1,15 +1,13 @@
-import Ember from 'ember';
+import { bind } from '@ember/runloop';
 import Dropdown from 'ember-bootstrap/components/bs-dropdown';
-
-const { run } = Ember;
 
 export default Dropdown.extend({
   isOpen: false,
 
   didInsertElement() {
-    this._onHover = run.bind(this, 'set', 'isOpen', true);
-    this._onUnhover = run.bind(this, 'set', 'isOpen', false);
-    this._onClick = run.bind(this, 'toggleProperty', 'isOpen');
+    this._onHover = bind(this, 'set', 'isOpen', true);
+    this._onUnhover = bind(this, 'set', 'isOpen', false);
+    this._onClick = bind(this, 'toggleProperty', 'isOpen');
 
     this.element.addEventListener('mouseover', this._onHover, true);
     this.element.addEventListener('mouseout', this._onUnhover, true);
