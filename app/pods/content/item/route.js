@@ -12,10 +12,6 @@ export default Route.extend({
     if (model.get('yaml') === undefined) {
       return tryCollection(this, transition);
     }
-
-    if (this.get('fastboot.isFastBoot')) {
-      return model.get('markdown');
-    }
   },
 
   setupController(controller, model) {
