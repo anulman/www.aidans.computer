@@ -26,6 +26,23 @@
       background: theme-color(dark);
       color: #839496;
     }
+
+    > table {
+      width: 100%;
+
+      td, th {
+        padding: .5rem 1rem;
+        border-right: 1px solid black;
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+
+      > tbody > tr:nth-of-type(odd) {
+        background: lightgrey;
+      }
+    }
   }
 
   + section {
