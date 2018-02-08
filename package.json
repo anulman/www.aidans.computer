@@ -29,7 +29,7 @@
     "ember-cli-fastboot": "github:ef4/ember-cli-fastboot#48b94151e373bc33bcc3ad737a1e3e2a7e4ed8da",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
-    "ember-cli-hyde": "~0.1.0",
+    "ember-cli-hyde": "~0.1.2",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-qunit": "^4.1.1",
     "ember-cli-sass": "^7.1.1",
