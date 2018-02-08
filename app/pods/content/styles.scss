@@ -28,18 +28,6 @@
     }
   }
 
-  p::first-line {
-    font-size: 1.25rem;
-    font-variant: small-caps;
-    line-height: 1.25rem;
-  }
-
-  p::first-letter {
-    font-family: cursive;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
   + section {
     margin-top: 2rem;
   }
