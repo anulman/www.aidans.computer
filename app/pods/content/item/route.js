@@ -1,11 +1,17 @@
 import Route from '@ember/routing/route';
-import { inject as service } from '@ember/service';
 
 export default Route.extend({
-  fastboot: service(),
-
   model({ item_id }) {
-    return this.store.findRecord('hyde/item', `content/${item_id}`);
+    return this.store.findRecord('hyde/item', `content/${item_id}`)
+      .catch((err) => {
+        let { code, errors } = err;
+
+        if (code === 'ENOENT' || errors.some(is404)) {
+          return this.store.findRecord('hyde/item', item_id);
+        } else {
+          throw err;
+        }
+      });
   },
 
   afterModel(model, transition) {
@@ -34,4 +40,8 @@ function tryCollection(context, transition) {
   let itemId = item_id.replace(/^collections\//, '');
 
   context.replaceWith('content.collection', itemId);
+}
+
+function is404({ status }) {
+  return status === '404';
 }
