@@ -10,6 +10,18 @@ module.exports = function(defaults) {
       'importBootstrapCSS': false,
       'whitelist': []
     },
+    hyde: {
+      directories: [
+        'content',
+        'journal',
+        'ideas'
+      ],
+      prember: [
+        { name: 'content', prefix: null, collectionPrefix: true },
+        'journal',
+        'ideas'
+      ]
+    },
     prember: {
       urls: [
         '/'
