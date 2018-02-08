@@ -1,0 +1,1 @@
+{"data":{"type":"hyde/collections","id":"content","attributes":{},"relationships":{"collections":{"data":[{"type":"hyde/collections","id":"content/clients"},{"type":"hyde/collections","id":"content/tags"},{"type":"hyde/collections","id":"content/open-source"}]}}}}

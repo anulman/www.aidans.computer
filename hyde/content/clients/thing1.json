@@ -1,0 +1,1 @@
+{"data":{"type":"hyde/items","id":"content/clients/thing1","attributes":{"yaml":{"title":"Thing1","description":"Did some things for a thing"}},"relationships":{"parent":{"data":{"type":"hyde/collections","id":"content/clients"}}}}}

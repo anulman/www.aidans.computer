@@ -1,0 +1,1 @@
+{"data":{"type":"hyde/collections","id":"content/clients","attributes":{},"relationships":{"parent":{"data":{"type":"hyde/collections","id":"content"}},"items":{"data":[{"type":"hyde/items","id":"content/clients/thing1"},{"type":"hyde/items","id":"content/clients/thing2"}]}}}}

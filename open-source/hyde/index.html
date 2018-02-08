@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AidansComputer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+<meta name="aidans-computer/config/environment" content="%7B%22modulePrefix%22%3A%22aidans-computer%22%2C%22podModulePrefix%22%3A%22aidans-computer/pods%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22/www.aidans.computer/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22aidans-computer%22%2C%22version%22%3A%220.0.0+4cf8635f%22%7D%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%22anulman.com%22%2C%22aidans.computer%22%2C%7B%7D%5D%7D%2C%22highlightTheme%22%3A%22solarized-dark%22%2C%22ember-component-css%22%3A%7B%22terseClassNames%22%3Atrue%7D%2C%22exportApplicationGlobal%22%3Afalse%7D" />
+<!-- EMBER_CLI_FASTBOOT_TITLE -->
+
+    <link integrity="" rel="stylesheet" href="/www.aidans.computer/assets/vendor-992347adad7f78fd0789ad655b7d6ff3.css">
+    <link integrity="" rel="stylesheet" href="/www.aidans.computer/assets/aidans-computer-6e4df8be0fdb77c04c027dd0578070b0.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mkq0tdy.css">
+
+    
+  </head>
+  <body>
+    <div id="ember657" class="ember-view"><div class="__b62fc __c8555">
+  <canvas></canvas>
+
+  <header class="sticky-top bg-primary">
+<ul id="ember659" class="container nav __79d9e ember-view"><li id="ember660" role="presentation" class="nav-item ember-view">        <a href="/www.aidans.computer/" id="ember661" class="nav-link ember-view">Home</a>
+
+</li>
+<li id="ember666" class="__3b989 dropdown nav-item ember-view"><a href="#" id="ember667" role="button" class="dropdown-toggle nav-link ember-view">            <a href="/www.aidans.computer/collections/open-source" id="ember668" class="ember-view">Open Source</a>
+</a>
+
+
+  <div id="ember670-popper" role="menu" class="dropdown-menu ">
+      <a href="/www.aidans.computer/open-source/hyde" id="ember689" class="dropdown-item active ember-view">                  hyde
+</a>
+
+  </div>
+</li><li id="ember672" class="__3b989 dropdown nav-item ember-view"><a href="#" id="ember673" role="button" class="dropdown-toggle nav-link ember-view">            <a href="/www.aidans.computer/collections/clients" id="ember674" class="ember-view">Clients</a>
+</a>
+
+
+  <div id="ember676-popper" role="menu" class="dropdown-menu ">
+      <a href="/www.aidans.computer/clients/thing1" id="ember679" class="dropdown-item ember-view">                  Thing1
+</a><a href="/www.aidans.computer/clients/thing2" id="ember682" class="dropdown-item ember-view">                  Thing2 - iOS
+</a>
+
+  </div>
+</li>
+</ul>  </header>
+
+  <main class="container">
+    <header class="container col-md-8">
+  <h1>hyde</h1>
+
+  <p>a stateful, jekyll-friendly cms parser for javascript build pipelines. it's a beast!</p>
+</header>
+
+<section id="ember685" class="ember-view">  <article id="ember690" class="ember-view"><h2 id="intro">Intro</h2>
+<ul>
+<li>This site <em>(<a href="https://anulman.com/www.aidans.computer">https://anulman.com/www.aidans.computer</a>)</em></li>
+<li>Auto-builds &amp; deploys with Travis <em>(<a href="https://github.com/anulman/www.aidans.computer/blob/master/.travis.yml#L31-L41">source</a>)</em></li>
+<li>Compiling from a public GH project's <code><span class="hljs-literal">master</span></code> branch <em>(<a href="https://github.com/anulman/www.aidans.computer/tree/master">source</a>)</em></li>
+<li>With Jekyll-like content <em>(<a href="https://github.com/anulman/www.aidans.computer/tree/master/content">source</a>)</em></li>
+<li>To the repo's <code><span class="hljs-attribute">gh-pages</span></code> branch <em>(<a href="https://github.com/anulman/www.aidans.computer/tree/gh-pages">source</a>)</em></li>
+<li>With a static "API" to site metadata + content <em>(<a href="https://github.com/anulman/www.aidans.computer/tree/gh-pages/hyde">source</a>)</em></li>
+<li>Using:<ul>
+<li><a href="https://github.com/anulman/hyde"><code><span class="hljs-attribute">hyde</span></code></a> (stateful, Jekyll-friendly CMS parser)</li>
+<li><a href="https://github.com/anulman/ember-cli-hyde"><code>ember-<span class="hljs-keyword">cli</span>-hyde</code></a> (ember addon; funnels content dirs through the compiler, + exposes helpful models &amp; components)</li>
+<li><a href="https://github.com/anulman/broccoli-hyde-compiler"><code><span class="hljs-attribute">broccoli-hyde-compiler</span></code></a> (broccoli plugin; used by <code>ember-<span class="hljs-keyword">cli</span></code> to compile <code><span class="hljs-attribute">hyde</span></code> directories)</li></ul></li>
+</ul>
+<h2 id="buildpipelineconfig">Build Pipeline + Config</h2>
+<ul>
+<li><code>ember-<span class="hljs-keyword">cli</span>-hyde</code> passes configured root dirs to the <code><span class="hljs-attribute">broccoli-hyde-compiler</span></code> <em>(<a href="https://github.com/anulman/ember-cli-hyde/blob/master/index.js#L19-L30">source</a>)</em></li>
+<li>Which parses Markdown files with <code><span class="hljs-attribute">hyde</span></code> <em>(<a href="https://github.com/anulman/broccoli-hyde-compiler/blob/master/src/index.js#L26">source</a>)</em></li>
+<li>And emits <code><span class="hljs-title">.json</span></code> metadata + <code><span class="hljs-title">.md</span></code> content files based on the final state <em>(<a href="https://github.com/anulman/broccoli-hyde-compiler/blob/master/src/index.js#L39-L50">source</a>)</em></li>
+<li>Supports configuring single &amp; multiple directories (default = <code><span class="hljs-attribute">content</span></code>) <em>(<a href="https://github.com/anulman/ember-cli-hyde/blob/master/lib/config.js#L47-L55">source</a>)</em></li>
+<li>n.b. any non-parseable files are copied into final content as-is <em>(<a href="https://github.com/anulman/broccoli-hyde-compiler/blob/master/src/index.js#L26-L36">source</a>)</em></li>
+</ul>
+<pre><code class="javascript language-javascript"><span class="hljs-comment">// ember-cli-build.js</span>
+<span class="hljs-keyword">const</span> EmberApp = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ember-cli/lib/broccoli/ember-app'</span>);
+<span class="hljs-keyword">let</span> hyde = {};
+
+<span class="hljs-comment">// for multiple dirs:</span>
+hyde.directories = [<span class="hljs-string">'content'</span>, <span class="hljs-string">'docs'</span>];
+
+<span class="hljs-comment">// for single dirs:</span>
+hyde.directories = <span class="hljs-string">'content'</span>; <span class="hljs-comment">// or</span>
+hyde.directory = <span class="hljs-string">'docs'</span>;
+
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">defaults</span>) </span>{
+  <span class="hljs-keyword">let</span> app = <span class="hljs-keyword">new</span> EmberApp(defaults, { hyde });
+
+  <span class="hljs-keyword">return</span> app.toTree();
+}
+</code></pre>
+<h2 id="contentapi">Content "API"</h2>
+<ul>
+<li>Your app can then look up generic <code>hyde/<span class="hljs-built_in">item</span></code> or <code>hyde/collection</code> models <em>(<a href="https://github.com/anulman/www.aidans.computer/blob/master/app/pods/content/item/route.js#L8">source</a>)</em></li>
+<li>These are exposed by <code>ember-<span class="hljs-keyword">cli</span>-hyde</code>, and offer a basic (+ extendable) interface for your generated content <em>(<a href="https://github.com/anulman/ember-cli-hyde/blob/master/addon/models/hyde/item.js">source</a>)</em></li>
+<li>The models have adapters, which look up metadata + content at predictable (+ configurable) routes—your "database" <em>(<a href="https://github.com/anulman/ember-cli-hyde/blob/master/addon/adapters/hyde.js">source</a>)</em></li>
+</ul>
+<h2 id="markdownsectioncomponent"><code>{{markdown-section}}</code> Component</h2>
+<ul>
+<li>Your app can use <code>ember-<span class="hljs-keyword">cli</span>-hyde</code>'s <code>{{markdown-section}}</code> component to render an item's content <em>(<a href="https://github.com/anulman/www.aidans.computer/blob/master/app/pods/content/item/template.hbs#L7">source</a>)</em></li>
+<li>It loads generated Markdown from the expected URL <em>(<a href="https://github.com/anulman/ember-cli-hyde/blob/master/addon/components/markdown-section.js#L36">source</a>)</em><ul>
+<li>Fetching logic lives in a globally-accessible service <em>(<a href="https://github.com/anulman/ember-cli-hyde/blob/master/addon/services/hyde.js">source</a> :)</em></li></ul></li>
+<li>And can be configured to cache content (default = false) <em>(<a href="https://github.com/anulman/ember-cli-hyde/blob/master/addon/components/markdown-section.js#L30-L32">source</a>)</em></li>
+<li>The component parses your markdown with <code>ember-<span class="hljs-keyword">cli</span>-showdown</code>'s <code>{{markdown-to-html}}</code> component, configured w/ a highlightjs extension for syntax highlighting <em>(<a href="https://github.com/anulman/ember-cli-hyde/blob/master/addon/templates/components/markdown-section.hbs#L2">source</a>)</em></li>
+<li>And exposes promise state, allowing for more advanced UI patterns, eg skeleton UI <em>(<a href="https://github.com/anulman/ember-cli-hyde/blob/master/addon/templates/components/markdown-section.hbs#L1-L5">source</a>)</em></li>
+</ul>
+<h2 id="prerendering">Pre-rendering</h2>
+<ul>
+<li>If your project is Fastboot-friendly &amp; pre-renders HTML in build output with <code><span class="hljs-attribute">prember</span></code>, <code>ember-<span class="hljs-keyword">cli</span>-hyde</code> will register generated urls for pre-rendering <em>(<a href="https://github.com/anulman/ember-cli-hyde/blob/master/index.js#L16">source</a>)</em></li>
+<li>Each content dir may configure its urls' default <code><span class="hljs-attribute">prefix</span></code>, <code><span class="hljs-attribute">itemPrefix</span></code>, and <code><span class="hljs-attribute">collectionPrefix</span></code> <em>(<a href="https://github.com/anulman/ember-cli-hyde/blob/master/lib/prember.js#L16-L39">source</a>)</em></li>
+<li>The <code>{{markdown-section}}</code> component will defer pre-rendering until Markdown is loaded, parsed, &amp; painted <em>(<a href="https://github.com/anulman/ember-cli-hyde/blob/master/addon/components/markdown-section.js#L24-L26">source</a>)</em></li>
+</ul>
+<pre><code class="javascript language-javascript"><span class="hljs-comment">// ember-cli-build.js</span>
+<span class="hljs-keyword">const</span> EmberApp = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ember-cli/lib/broccoli/ember-app'</span>);
+<span class="hljs-keyword">let</span> hyde = {};
+
+<span class="hljs-comment">// builder objects define a name, and one or many prefixes:</span>
+<span class="hljs-keyword">let</span> builder = {
+  <span class="hljs-attr">name</span>: <span class="hljs-string">'content'</span>, <span class="hljs-comment">// required. string. use same name as configured directory name</span>
+  prefix: <span class="hljs-literal">true</span>, <span class="hljs-comment">// optional. bool|string. default = null. `true` aliases to the builder's name.</span>
+  itemPrefix: <span class="hljs-string">'items'</span>, <span class="hljs-comment">// optional. string. default = null. does not accept `true` as alias</span>
+  collectionPrefix: <span class="hljs-string">'collections'</span> <span class="hljs-comment">// optional. string. default = 'collections'. `true` aliases to default</span>
+};
+
+<span class="hljs-comment">// the builder above will pre-render these url patterns for all items + collections compiled from the `content` dir:</span>
+<span class="hljs-comment">// - items: `/content/items/${itemId}`</span>
+<span class="hljs-comment">// - collections: `/content/collections/${collectionId}`</span>
+
+<span class="hljs-comment">// you may pass a single builder, or an array of builders:</span>
+hyde.prember = builder; <span class="hljs-comment">// or</span>
+hyde.prember = [builder];
+
+<span class="hljs-comment">// if you do not configure prember's builders, e-cli-hyde will use the default prefixes for all compiled directories.</span>
+<span class="hljs-comment">// to disable this behavior, set to false:</span>
+hyde.prember = <span class="hljs-literal">false</span>;
+
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">defaults</span>) </span>{
+  <span class="hljs-keyword">let</span> app = <span class="hljs-keyword">new</span> EmberApp(defaults, { hyde });
+
+  <span class="hljs-keyword">return</span> app.toTree();
+}
+</code></pre>
+<h2 id="todos">Todos</h2>
+<ul>
+<li>Further tidy documentation</li>
+<li>Add support for ordering content by priority / timestamp</li>
+<li>Publish webpack pipeline, + helpers for react / vua / angular ecosystems</li>
+<li>Make markdown-section a contextual component</li>
+<li>Dynamically look up markdown-section layout?</li>
+<li>Extract routes as ember engines?</li>
+<li>Add tests for e-cli-hyde models, adapters, component</li>
+<li>Add tests for broccoli-hyde-compiler</li>
+</ul>
+</article>
+</section>
+
+  </main>
+
+  <footer class="bg-dark text-white">
+    <ul class="container list-unstyled d-flex align-items-center mb-2 mt-2">
+      <li class="mr-1">copyright 2018 aidan nulman.</li>
+      <li>photo by <a href="http://evablue.com">eva blue</a>.</li>
+    </ul>
+  </footer>
+</div>
+</div><script type="fastboot/shoebox" id="shoebox-hyde-collection">{"content":{"data":{"id":"content","type":"hyde/collection","attributes":{"name":"Content"},"relationships":{"collections":{"data":[{"id":"content/clients","type":"hyde/collection"},{"id":"content/tags","type":"hyde/collection"},{"id":"content/open-source","type":"hyde/collection"}]}}}},"content/clients":{"data":{"id":"content/clients","type":"hyde/collection","attributes":{"name":"Clients"},"relationships":{"parent":{"data":{"type":"hyde/collection","id":"content"}},"items":{"data":[{"id":"content/clients/thing1","type":"hyde/item"},{"id":"content/clients/thing2","type":"hyde/item"}]}}}},"content/tags":{"data":{"id":"content/tags","type":"hyde/collection","attributes":{"name":"Tags"},"relationships":{"parent":{"data":{"type":"hyde/collection","id":"content"}},"collections":{"data":[{"type":"hyde/collection","id":"content/tags/cordova"},{"type":"hyde/collection","id":"content/tags/ember"},{"type":"hyde/collection","id":"content/tags/react"},{"type":"hyde/collection","id":"content/tags/vue"},{"type":"hyde/collection","id":"content/tags/mobile"},{"type":"hyde/collection","id":"content/tags/ios"},{"type":"hyde/collection","id":"content/tags/android"},{"type":"hyde/collection","id":"content/tags/electron"},{"type":"hyde/collection","id":"content/tags/hybrid"},{"type":"hyde/collection","id":"content/tags/jekyll"},{"type":"hyde/collection","id":"content/tags/hyde"},{"type":"hyde/collection","id":"content/tags/ember-cli"},{"type":"hyde/collection","id":"content/tags/broccoli"},{"type":"hyde/collection","id":"content/tags/nodejs"}]}}}},"content/open-source":{"data":{"id":"content/open-source","type":"hyde/collection","attributes":{"name":"Open Source"},"relationships":{"parent":{"data":{"type":"hyde/collection","id":"content"}},"items":{"data":[{"id":"content/open-source/corber","type":"hyde/item"},{"id":"content/open-source/ember-electron","type":"hyde/item"},{"id":"content/open-source/hyde","type":"hyde/item"}]}}}},"content/tags/cordova":{"data":{"id":"content/tags/cordova","type":"hyde/collection","attributes":{"name":"Cordova"},"relationships":{"parent":{"data":{"type":"hyde/collection","id":"content/tags"}},"items":{"data":[{"type":"hyde/item","id":"content/open-source/corber"}]}}}},"content/tags/ember":{"data":{"id":"content/tags/ember","type":"hyde/collection","attributes":{"name":"Ember"},"relationships":{"parent":{"data":{"type":"hyde/collection","id":"content/tags"}},"items":{"data":[{"type":"hyde/item","id":"content/open-source/corber"},{"type":"hyde/item","id":"content/open-source/ember-electron"},{"type":"hyde/item","id":"content/open-source/hyde"}]}}}},"content/tags/react":{"data":{"id":"content/tags/react","type":"hyde/collection","attributes":{"name":"React"},"relationships":{"parent":{"data":{"type":"hyde/collection","id":"content/tags"}},"items":{"data":[{"type":"hyde/item","id":"content/open-source/corber"}]}}}},"content/tags/vue":{"data":{"id":"content/tags/vue","type":"hyde/collection","attributes":{"name":"Vue"},"relationships":{"parent":{"data":{"type":"hyde/collection","id":"content/tags"}},"items":{"data":[{"type":"hyde/item","id":"content/open-source/corber"}]}}}},"content/tags/mobile":{"data":{"id":"content/tags/mobile","type":"hyde/collection","attributes":{"name":"Mobile"},"relationships":{"parent":{"data":{"type":"hyde/collection","id":"content/tags"}},"items":{"data":[{"type":"hyde/item","id":"content/open-source/corber"}]}}}},"content/tags/ios":{"data":{"id":"content/tags/ios","type":"hyde/collection","attributes":{"name":"Ios"},"relationships":{"parent":{"data":{"type":"hyde/collection","id":"content/tags"}},"items":{"data":[{"type":"hyde/item","id":"content/open-source/corber"}]}}}},"content/tags/android":{"data":{"id":"content/tags/android","type":"hyde/collection","attributes":{"name":"Android"},"relationships":{"parent":{"data":{"type":"hyde/collection","id":"content/tags"}},"items":{"data":[{"type":"hyde/item","id":"content/open-source/corber"}]}}}},"content/tags/electron":{"data":{"id":"content/tags/electron","type":"hyde/collection","attributes":{"name":"Electron"},"relationships":{"parent":{"data":{"type":"hyde/collection","id":"content/tags"}},"items":{"data":[{"type":"hyde/item","id":"content/open-source/ember-electron"}]}}}},"content/tags/hybrid":{"data":{"id":"content/tags/hybrid","type":"hyde/collection","attributes":{"name":"Hybrid"},"relationships":{"parent":{"data":{"type":"hyde/collection","id":"content/tags"}},"items":{"data":[{"type":"hyde/item","id":"content/open-source/ember-electron"}]}}}},"content/tags/jekyll":{"data":{"id":"content/tags/jekyll","type":"hyde/collection","attributes":{"name":"Jekyll"},"relationships":{"parent":{"data":{"type":"hyde/collection","id":"content/tags"}},"items":{"data":[{"type":"hyde/item","id":"content/open-source/hyde"}]}}}},"content/tags/hyde":{"data":{"id":"content/tags/hyde","type":"hyde/collection","attributes":{"name":"Hyde"},"relationships":{"parent":{"data":{"type":"hyde/collection","id":"content/tags"}},"items":{"data":[{"type":"hyde/item","id":"content/open-source/hyde"}]}}}},"content/tags/ember-cli":{"data":{"id":"content/tags/ember-cli","type":"hyde/collection","attributes":{"name":"Ember Cli"},"relationships":{"parent":{"data":{"type":"hyde/collection","id":"content/tags"}},"items":{"data":[{"type":"hyde/item","id":"content/open-source/hyde"}]}}}},"content/tags/broccoli":{"data":{"id":"content/tags/broccoli","type":"hyde/collection","attributes":{"name":"Broccoli"},"relationships":{"parent":{"data":{"type":"hyde/collection","id":"content/tags"}},"items":{"data":[{"type":"hyde/item","id":"content/open-source/hyde"}]}}}},"content/tags/nodejs":{"data":{"id":"content/tags/nodejs","type":"hyde/collection","attributes":{"name":"Nodejs"},"relationships":{"parent":{"data":{"type":"hyde/collection","id":"content/tags"}},"items":{"data":[{"type":"hyde/item","id":"content/open-source/hyde"}]}}}}}</script><script type="fastboot/shoebox" id="shoebox-hyde-item">{"content/open-source/hyde":{"data":{"id":"content/open-source/hyde","type":"hyde/item","attributes":{"yaml":{"title":"hyde","description":"a stateful, jekyll-friendly cms parser for javascript build pipelines. it's a beast!"}},"relationships":{"parent":{"data":{"type":"hyde/collection","id":"content/open-source"}},"tags":{"data":[{"type":"hyde/collection","id":"content/tags/jekyll"},{"type":"hyde/collection","id":"content/tags/hyde"},{"type":"hyde/collection","id":"content/tags/ember"},{"type":"hyde/collection","id":"content/tags/ember-cli"},{"type":"hyde/collection","id":"content/tags/broccoli"},{"type":"hyde/collection","id":"content/tags/nodejs"}]}}}}}</script><script type="fastboot/shoebox" id="shoebox-hyde-files">{"content/open-source/hyde.md":"## Intro\n- This site _([https://anulman.com/www.aidans.computer](https://anulman.com/www.aidans.computer))_\n- Auto-builds \u0026 deploys with Travis _([source](https://github.com/anulman/www.aidans.computer/blob/master/.travis.yml#L31-L41))_\n- Compiling from a public GH project's `master` branch _([source](https://github.com/anulman/www.aidans.computer/tree/master))_\n- With Jekyll-like content _([source](https://github.com/anulman/www.aidans.computer/tree/master/content))_\n- To the repo's `gh-pages` branch _([source](https://github.com/anulman/www.aidans.computer/tree/gh-pages))_\n- With a static \"API\" to site metadata + content _([source](https://github.com/anulman/www.aidans.computer/tree/gh-pages/hyde))_\n- Using:\n    - [`hyde`](https://github.com/anulman/hyde) (stateful, Jekyll-friendly CMS parser)\n    - [`ember-cli-hyde`](https://github.com/anulman/ember-cli-hyde) (ember addon; funnels content dirs through the compiler, + exposes helpful models \u0026 components)\n    - [`broccoli-hyde-compiler`](https://github.com/anulman/broccoli-hyde-compiler) (broccoli plugin; used by `ember-cli` to compile `hyde` directories)\n\n## Build Pipeline + Config\n- `ember-cli-hyde` passes configured root dirs to the `broccoli-hyde-compiler` _([source](https://github.com/anulman/ember-cli-hyde/blob/master/index.js#L19-L30))_\n- Which parses Markdown files with `hyde` _([source](https://github.com/anulman/broccoli-hyde-compiler/blob/master/src/index.js#L26))_\n- And emits `.json` metadata + `.md` content files based on the final state _([source](https://github.com/anulman/broccoli-hyde-compiler/blob/master/src/index.js#L39-L50))_\n- Supports configuring single \u0026 multiple directories (default = `content`) _([source](https://github.com/anulman/ember-cli-hyde/blob/master/lib/config.js#L47-L55))_\n- n.b. any non-parseable files are copied into final content as-is _([source](https://github.com/anulman/broccoli-hyde-compiler/blob/master/src/index.js#L26-L36))_\n```javascript\n// ember-cli-build.js\nconst EmberApp = require('ember-cli/lib/broccoli/ember-app');\nlet hyde = {};\n\n// for multiple dirs:\nhyde.directories = ['content', 'docs'];\n\n// for single dirs:\nhyde.directories = 'content'; // or\nhyde.directory = 'docs';\n\nmodule.exports = function(defaults) {\n  let app = new EmberApp(defaults, { hyde });\n\n  return app.toTree();\n}\n```\n\n## Content \"API\"\n- Your app can then look up generic `hyde/item` or `hyde/collection` models _([source](https://github.com/anulman/www.aidans.computer/blob/master/app/pods/content/item/route.js#L8))_\n- These are exposed by `ember-cli-hyde`, and offer a basic (+ extendable) interface for your generated content _([source](https://github.com/anulman/ember-cli-hyde/blob/master/addon/models/hyde/item.js))_\n- The models have adapters, which look up metadata + content at predictable (+ configurable) routes—your \"database\" _([source](https://github.com/anulman/ember-cli-hyde/blob/master/addon/adapters/hyde.js))_\n\n## `{{markdown-section}}` Component\n- Your app can use `ember-cli-hyde`'s `{{markdown-section}}` component to render an item's content _([source](https://github.com/anulman/www.aidans.computer/blob/master/app/pods/content/item/template.hbs#L7))_\n- It loads generated Markdown from the expected URL _([source](https://github.com/anulman/ember-cli-hyde/blob/master/addon/components/markdown-section.js#L36))_\n    - Fetching logic lives in a globally-accessible service _([source](https://github.com/anulman/ember-cli-hyde/blob/master/addon/services/hyde.js) :)_\n- And can be configured to cache content (default = false) _([source](https://github.com/anulman/ember-cli-hyde/blob/master/addon/components/markdown-section.js#L30-L32))_\n- The component parses your markdown with `ember-cli-showdown`'s `{{markdown-to-html}}` component, configured w/ a highlightjs extension for syntax highlighting _([source](https://github.com/anulman/ember-cli-hyde/blob/master/addon/templates/components/markdown-section.hbs#L2))_\n- And exposes promise state, allowing for more advanced UI patterns, eg skeleton UI _([source](https://github.com/anulman/ember-cli-hyde/blob/master/addon/templates/components/markdown-section.hbs#L1-L5))_\n\n## Pre-rendering\n- If your project is Fastboot-friendly \u0026 pre-renders HTML in build output with `prember`, `ember-cli-hyde` will register generated urls for pre-rendering _([source](https://github.com/anulman/ember-cli-hyde/blob/master/index.js#L16))_\n- Each content dir may configure its urls' default `prefix`, `itemPrefix`, and `collectionPrefix` _([source](https://github.com/anulman/ember-cli-hyde/blob/master/lib/prember.js#L16-L39))_\n- The `{{markdown-section}}` component will defer pre-rendering until Markdown is loaded, parsed, \u0026 painted _([source](https://github.com/anulman/ember-cli-hyde/blob/master/addon/components/markdown-section.js#L24-L26))_\n```javascript\n// ember-cli-build.js\nconst EmberApp = require('ember-cli/lib/broccoli/ember-app');\nlet hyde = {};\n\n// builder objects define a name, and one or many prefixes:\nlet builder = {\n  name: 'content', // required. string. use same name as configured directory name\n  prefix: true, // optional. bool|string. default = null. `true` aliases to the builder's name.\n  itemPrefix: 'items', // optional. string. default = null. does not accept `true` as alias\n  collectionPrefix: 'collections' // optional. string. default = 'collections'. `true` aliases to default\n};\n\n// the builder above will pre-render these url patterns for all items + collections compiled from the `content` dir:\n// - items: `/content/items/${itemId}`\n// - collections: `/content/collections/${collectionId}`\n\n// you may pass a single builder, or an array of builders:\nhyde.prember = builder; // or\nhyde.prember = [builder];\n\n// if you do not configure prember's builders, e-cli-hyde will use the default prefixes for all compiled directories.\n// to disable this behavior, set to false:\nhyde.prember = false;\n\nmodule.exports = function(defaults) {\n  let app = new EmberApp(defaults, { hyde });\n\n  return app.toTree();\n}\n```\n\n## Todos\n- Further tidy documentation\n- Add support for ordering content by priority / timestamp\n- Publish webpack pipeline, + helpers for react / vua / angular ecosystems\n- Make markdown-section a contextual component\n- Dynamically look up markdown-section layout?\n- Extract routes as ember engines?\n- Add tests for e-cli-hyde models, adapters, component\n- Add tests for broccoli-hyde-compiler"}</script>
+
+    <script src="/www.aidans.computer/assets/vendor-59095d73c5d194a3018a6ab2ec13510e.js"></script>
+    <script src="/www.aidans.computer/assets/aidans-computer-2c4631db1b050adba8d8c4b50c6687a8.js"></script>
+
+    <div id="ember-bootstrap-wormhole"></div>
+  </body>
+</html>
