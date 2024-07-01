@@ -2,9 +2,38 @@
   "name": "www.aidans.computer",
   "version": "0.0.1",
   "author": "Aidan Nulman",
+  "type": "module",
   "description": "Website for aidans.computer",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start",
+    "lint": "prettier --check '**/*' --ignore-unknown && eslint ./src/**",
+    "format": "prettier --write '**/*' --ignore-unknown"
   },
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {
+    "@mdx-js/rollup": "^3.0.1",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/parser": "^7.14.1",
+    "@vitejs/plugin-react-swc": "^3.7.0",
+    "eslint": "^9.6.0",
+    "eslint-plugin-react": "^7.34.3",
+    "prettier": "^3.3.2",
+    "remark-frontmatter": "^5.0.0",
+    "vinxi": "^0.3.12",
+    "vite": "^5.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "^1.43.3",
+    "@tanstack/router-devtools": "^1.43.3",
+    "@tanstack/router-vite-plugin": "^1.43.1",
+    "@tanstack/start": "^1.43.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
 }
